@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+nav {
+    ul {
+        font-family: $fontNav;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 25px;
+        float: right;
+        margin: 0;
+        padding: 30px 5%;
+    }
+
+    li {
+        position: relative;
+        list-style: none;
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    li:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    li:active {
+        transform: scale(1.15);
+    }
+
+    li::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        right: 100%;
+        border-bottom: 3px solid $white;
+        transition: all 500ms;
+    }
+
+    li:hover::before {
+        right: 0;
+        left: 0;
+    }
+
+    a:hover, a:visited, a:link, a:active {
+        color: $white;
+        text-decoration: none;
+    }
+}

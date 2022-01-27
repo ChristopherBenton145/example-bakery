@@ -1,0 +1,152 @@
+@import './variables.scss';
+
+.background1 {
+    background-image: url('../../public/images/background1.jpeg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.about-us {
+    background: $white;
+    border-bottom:  3px $lightGray dashed;
+    font-family: $fontDongle;
+    font-size: 30px;
+
+    div {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+}
+
+.why-chose-us {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5%;
+    width: 80%;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    font-family: $fontDongle;
+    font-size: 30px;
+    text-align: end;
+
+    img {
+        width: 400px;
+        border-radius: 150px;
+    }
+
+    div {
+        line-height: 25px;
+    }
+}
+
+.explore {
+    text-align: center;
+    margin-bottom: 50px;
+
+    div:hover {
+        transform: scale(1.1);
+        transition: all 200ms;
+    }
+    
+    .explore-button-1 {
+        background: $redGlow; 
+        display: inline-block;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 5px;
+
+        button:hover {
+            background: $redGlow; 
+            transition: all 800ms;
+        }
+
+        a {
+            background: $redGlow;  
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .explore-button-2 {
+        background: $blueGlow;
+        display: inline-block;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 5px;
+
+        button:hover {
+            background: $blueGlow;
+            transition: all 800ms;
+        }
+
+        a {
+            background: $blueGlow;  
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    button {
+        background: $white;
+        border: none;
+        font-family: 'Dongle', sans-serif;
+        font-size: 40px;
+    }
+
+    a:hover {
+        background: $white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 800ms; 
+    }
+
+    a:hover, .explore a:visited, .explore a:link, .explore a:active {
+        text-decoration: none;
+    }
+}
+
+.footer {
+    background-color: $lightGray;
+    display: inline-block;
+    font-family: 'Dongle', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+
+    h3::before {
+        content: '';
+        background-color: $black;
+        display: inline-block;
+        border-radius: 10px;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+    }
+
+    h3::after {
+        content: '';
+        background-color: $black;
+        display: inline-block;
+        border-radius: 10px;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 800px) {
+    video {
+        width: 400px;
+    }
+}
+
+@media (min-width: 800px) {
+    .why-chose-us {
+        flex-direction: row;
+    }
+}
